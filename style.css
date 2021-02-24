@@ -30,11 +30,3 @@ h1 {
   display: inline-flex;
   flex-grow: 1;
 }
-
-.colored {
-  background-color: black;
-}
-
-/*
-  https://stackoverflow.com/questions/18508442/remove-whitespace-between-div-element#answer-18508714
-*/

@@ -11,8 +11,11 @@ function createSquareGrid(gridSize=16) {
     for (let j = 0; j < gridSize; j++) {
       const rowItem = document.createElement('div');
       rowItem.classList.add('row-item');
+      rowItem.style.cssText = 'background-color: black; opacity: 0';
       rowItem.addEventListener('mouseover', function() {
-        this.classList.add('colored');
+        if (Number(this.style['opacity']) !== 1)  {
+          this.style['opacity'] = `${Number(this.style['opacity']) + 0.1}`;
+        }
       });
       row.appendChild(rowItem);
     }
@@ -26,7 +29,6 @@ function deleteGrid() {
     container.removeChild(container.firstChild);
   }
 }
-
 
 const resetBtn = document.querySelector('#reset');
 resetBtn.addEventListener('click', () => {
