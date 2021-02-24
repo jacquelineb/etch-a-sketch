@@ -29,4 +29,6 @@ h1 {
 .row-item {
   display: inline-flex;
   flex-grow: 1;
+  background-color: black;
+  opacity: 0;
 }
