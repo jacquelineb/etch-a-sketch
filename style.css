@@ -1,0 +1,40 @@
+h1 {
+  text-align: center;
+}
+
+#reset {
+  display: block;
+  width: 800px;
+  height: 37px;
+  margin: 0 auto;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: black;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 800px;
+}
+
+.row {
+  display: flex;
+  flex-grow: 1;
+}
+
+.row-item {
+  display: inline-flex;
+  flex-grow: 1;
+}
+
+.colored {
+  background-color: black;
+}
+
+/*
+  https://stackoverflow.com/questions/18508442/remove-whitespace-between-div-element#answer-18508714
+*/
