@@ -1,9 +1,20 @@
 (function() {
   'use strict';
 
-  const resetBtn = document.querySelector('#reset');
-  resetBtn.addEventListener('click', resizeGrid);
+  setupButtons();
   createSquareGrid();
+
+  function setupButtons() {
+      const clearBtn = document.querySelector('#clear');
+      clearBtn.addEventListener('click', clearGrid);
+      const resizeBtn = document.querySelector('#resize');
+      resizeBtn.addEventListener('click', resizeGrid);
+  }
+
+  function clearGrid() {
+    const rowItems = document.querySelectorAll('.row-item');
+    rowItems.forEach((rowItem) => rowItem.style['opacity'] = 0);
+  }
 
   function resizeGrid() {
     deleteCurrentGrid();
@@ -41,6 +52,7 @@
     do {
       gridSize = Number(prompt('Enter a grid size between 1 and 100 (inclusive).'));
     } while (!Number.isInteger(gridSize) || gridSize < 1 || gridSize > 100);
+
     return gridSize;
   }
 })();

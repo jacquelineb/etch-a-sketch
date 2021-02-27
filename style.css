@@ -2,11 +2,9 @@ h1 {
   text-align: center;
 }
 
-#reset {
-  display: block;
-  width: 800px;
-  height: 37px;
+#buttons-wrapper {
   margin: 0 auto;
+  text-align: center;
 }
 
 #container {
